@@ -55,7 +55,8 @@ endif::[]
 
 ** TP group :
 - [x] A
-- [ ] B +
+- [ ] B
+
  +
 // == Objectives
 == Objectifs
