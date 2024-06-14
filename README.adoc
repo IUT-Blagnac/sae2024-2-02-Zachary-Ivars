@@ -45,14 +45,18 @@ endif::[]
 
 === De la solution...
 
-* LAST NAME : DOE
-* First name : John
+* LAST NAME : IVARS
+* First name : Zachary
 * TD group : 
 - [ ] 1
-- [x] 2
-- [ ] 3
+- [ ] 2
+- [x] 3
 - [ ] 4
 
+** TP group :
+- [x] A
+- [ ] B +
+ +
 // == Objectives
 == Objectifs
 
@@ -185,20 +189,14 @@ WARNING: Les répertoires et fichiers existants devront être complétés et mis
 
 Voici les pré-requis pour exécuter nos codes d'évaluation.
 
-- Java v.x.y.z
-- ...
+- Java 17 ou 21
 
 === Reproductibilité
 
 - Pour reproduire nos analyses :
-. Installez X
-. Lancez Y
-. ...
-
-=== Références
-
-- link:http://xyz[Mon super outil XYZ]
-- ...
+. Lancez Visual Studio Code et ouvrez le fichier **`racine`** en temps que projet
+. Dirigez-vous dans les tests
+. Lancez le programme
 
 == Généralités, notation de la SAÉ et résultat du concours
 
