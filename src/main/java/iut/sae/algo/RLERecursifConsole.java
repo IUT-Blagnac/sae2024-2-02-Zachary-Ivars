@@ -7,7 +7,6 @@ public class RLERecursifConsole{
     public static void main(String[] args){
         String in="";
         int iterations=1;
-        
         if(args.length>=2){
             in=args[0];
             iterations=Integer.valueOf(args[1]);
@@ -16,7 +15,7 @@ public class RLERecursifConsole{
             Scanner scanner = new Scanner(System.in);
 
             System.out.println("Chaine à transformer : ");
-            in = scanner.next();
+            in = scanner.nextLine();
 
             System.out.println("Nombre d'itérations : ");
             iterations = scanner.nextInt();
@@ -27,7 +26,7 @@ public class RLERecursifConsole{
         try{
             System.out.println("Entrée : "+in);
             System.out.println("Itérations : "+iterations);
-            System.out.println("Sortie : "+ Algo.RLE(in, iterations));
+            System.out.println("Sortie : "+ Efficacite.RLE(in, iterations));
         }
         catch(AlgoException e){
             System.err.println("Erreur lors de la transformation");
