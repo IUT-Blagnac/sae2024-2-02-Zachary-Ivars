@@ -3,7 +3,7 @@ package iut.sae.algo;
 public class Sobriete {
 
     public static String RLE(String in) {
-        StringBuilder out = new StringBuilder();
+        StringBuilder out = new StringBuilder("");
         int nbrLettres = 1;
         int taille = in.length();
         for (int i = 0; i < taille; i++) {
