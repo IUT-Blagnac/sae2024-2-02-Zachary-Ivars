@@ -132,9 +132,7 @@ Par exemple pour votre algorithme java en simplicité, vous le déposerez avec l
 
 === Phase 2 : comparaison et évaluation des solutions
 
-Dans cette deuxième phase, (avec séances encadrées et libres), vous devrez comparer des solutions entre elles, et les classer en justifiant vos analyses.
-
-WARNING: Cette deuxième phase est en binôme (de votre choix)
+Dans cette deuxième phase, (avec séances encadrées et libres), vous devrez comparer des solutions entre elles, et les classer en justifiant vos analyses. +
 
 Vous vous verrez affecter, pour *chaque* catégorie d'algorithmes (Simplicité, Efficacité, Sobriété) un certain nombre de solutions au hasard parmi celles soumises en phase 1.
 
