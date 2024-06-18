@@ -3,7 +3,7 @@
 :numbered:
 :toc: left
 :toc-title: Sommaire
-:toclevels: 1
+:toclevels: 4
 :toc!:
 // Antora 
 // => traduction automatique fr/uk
