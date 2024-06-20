@@ -53,7 +53,7 @@ endif::[]
 - [x] 3
 - [ ] 4
 
-** TP group :
+* TP group :
 - [x] A
 - [ ] B
 
