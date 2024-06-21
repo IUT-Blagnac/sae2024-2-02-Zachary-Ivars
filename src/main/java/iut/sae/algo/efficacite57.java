@@ -1,6 +1,6 @@
 package iut.sae.algo;
 
-public class AlgoEfficace {
+public class efficacite57 {
 
     // Méthode pour effectuer l'encodage RLE (Run-Length Encoding)
     public static String RLE(String in) {

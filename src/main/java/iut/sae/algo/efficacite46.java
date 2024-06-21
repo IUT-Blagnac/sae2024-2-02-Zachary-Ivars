@@ -1,6 +1,6 @@
 package iut.sae.algo;
 
-public class Efficacite {
+public class efficacite46 {
      public static String RLE(String in){
         if (in.isEmpty()) return "";
 

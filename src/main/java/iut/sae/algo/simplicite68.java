@@ -11,7 +11,7 @@ package iut.sae.algo;
  *
  * @version 1.0
  */
-public class AlgoSimpleLisible {
+public class simplicite68 {
 
     /**
      * Compresse une chaîne de caractères en utilisant l'algorithme de Run-Length Encoding (RLE).

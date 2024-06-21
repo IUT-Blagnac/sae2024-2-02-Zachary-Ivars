@@ -1,7 +1,7 @@
 package iut.sae.algo;
 
 
-public class Efficacite{
+public class efficacite44{
 
     /* Méthode RLE efficacite
      * 

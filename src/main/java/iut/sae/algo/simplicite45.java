@@ -1,6 +1,6 @@
 package iut.sae.algo;
 
-public class Simplicite {
+public class simplicite45 {
 
     public static String RLE(String in) {
         int compteur = 0; //compteur d'occurence

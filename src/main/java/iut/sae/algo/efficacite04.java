@@ -3,7 +3,7 @@ package iut.sae.algo;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class efficacite {
+public class efficacite04 {
     
     public static String RLE(String in){
         if (in.isEmpty()) {

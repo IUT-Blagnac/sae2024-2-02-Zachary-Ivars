@@ -1,7 +1,7 @@
 package iut.sae.algo;
 
 
-public class Algo3{
+public class sobriete60{
     public static String RLE(String in){
                     
         if (in.isEmpty()) return "";

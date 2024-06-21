@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Classe contenant des méthodes simples pour l'encodage et le décodage selon l'algorithme Run-Length Encoding (RLE).
  */
-public class AlgoSimple {
+public class simplicite57 {
 
     /**
      * Méthode RLE pour compresser une chaîne selon l'algorithme Run-Length Encoding.

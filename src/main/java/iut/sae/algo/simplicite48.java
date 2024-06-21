@@ -1,6 +1,6 @@
 package iut.sae.algo;
 
-public class Algo{
+public class simplicite48{
     public static String RLE(String in){
         String msg="";
         if(in==""){
