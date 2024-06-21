@@ -2,20 +2,20 @@ package iut.sae.algo;
 
 import java.util.Scanner;
 
-public class RLERecursifConsole{
+public class RLERecursifConsole {
 
-    public static void main(String[] args){
-        String in="";
-        int iterations=1;
-        if(args.length>=2){
-            in=args[0];
-            iterations=Integer.valueOf(args[1]);
-        }
-        else{
+    public static void main(String[] args) throws AlgoException {
+        String in = "";
+        int iterations = 1;
+
+        if (args.length >= 2) {
+            in = args[0];
+            iterations = Integer.valueOf(args[1]);
+        } else {
             Scanner scanner = new Scanner(System.in);
 
             System.out.println("Chaine à transformer : ");
-            in = scanner.nextLine();
+            in = scanner.next();
 
             System.out.println("Nombre d'itérations : ");
             iterations = scanner.nextInt();
@@ -23,13 +23,14 @@ public class RLERecursifConsole{
             scanner.close();
         }
 
-        try{
-            System.out.println("Entrée : "+in);
-            System.out.println("Itérations : "+iterations);
-            System.out.println("Sortie : "+ Efficacite.RLE(in, iterations));
-        }
-        catch(AlgoException e){
-            System.err.println("Erreur lors de la transformation");
-        }
+        System.out.println("Entrée : " + in);
+        System.out.println("Itérations : " + iterations);
+
+        long startTime = System.currentTimeMillis();
+        System.out.println("Sortie : " + efficacite04.RLE(in, iterations));
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+
+        System.out.println("Temps d'exécution en millisecondes : " + executionTime);
     }
 }

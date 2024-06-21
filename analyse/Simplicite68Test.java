@@ -9,7 +9,7 @@ import junit.framework.TestCase;
  * 
  * Pour les fichiers tel que C et python, j'ai ajouté les fonctions de test dans le code même, souvent à la fin pour le différencier du programme principale.
  */
-public class SimpliciteTest extends TestCase{
+public class Simplicite48Test extends TestCase{
 
 /*
  * RLE("")=""

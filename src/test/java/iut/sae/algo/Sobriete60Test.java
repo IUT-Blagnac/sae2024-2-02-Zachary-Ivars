@@ -3,8 +3,13 @@ package iut.sae.algo;
 import org.junit.Test;
 import junit.framework.TestCase;
 
-
-public class Efficacite04Test extends TestCase{
+/**
+ * 
+ * Pour chaque algorithme différent, j'ai juste modifier le nom de la classe et/ou les noms des méthodes.
+ * 
+ * Pour les fichiers tel que C et python, j'ai ajouté les fonctions de test dans le code même, souvent à la fin pour le différencier du programme principale.
+ */
+public class Sobriete60Test extends TestCase{
 
 /*
  * RLE("")=""
@@ -15,12 +20,12 @@ public class Efficacite04Test extends TestCase{
  */
    @Test
    public void testRLE(){
-      assertEquals("", efficacite04.RLE("") );
+      assertEquals("", sobriete60.RLE("") );
       
-      assertEquals("1a2b3c", efficacite04.RLE("abbccc"));
-      assertEquals("3a1b2a", efficacite04.RLE("aaabaa"));
-      assertEquals("1a1A1a", efficacite04.RLE("aAa"));
-      assertEquals("9W4W", efficacite04.RLE("WWWWWWWWWWWWW"));
+       assertEquals("1a2b3c", sobriete60.RLE("abbccc"));
+      assertEquals("3a1b2a", sobriete60.RLE("aaabaa"));
+      assertEquals("1a1A1a", sobriete60.RLE("aAa"));
+      assertEquals("9W4W", sobriete60.RLE("WWWWWWWWWWWWW"));
 
    }
 
@@ -32,19 +37,19 @@ public class Efficacite04Test extends TestCase{
     @Test
     public void testRLERecursif(){
         try{
-            assertEquals("", efficacite04.RLE("", 1));
-            assertEquals("", efficacite04.RLE("", 3));
+            assertEquals("", sobriete60.RLE("", 1));
+            assertEquals("", sobriete60.RLE("", 3));
 
-            assertEquals("1a1b1c", efficacite04.RLE("abc", 1));
-            assertEquals("1a2b3c", efficacite04.RLE("abbccc", 1));
-            assertEquals("3a1b2a", efficacite04.RLE("aaabaa", 1));
-            assertEquals("1a1A1a", efficacite04.RLE("aAa", 1));
+            assertEquals("1a1b1c", sobriete60.RLE("abc", 1));
+            assertEquals("1a2b3c", sobriete60.RLE("abbccc", 1));
+            assertEquals("3a1b2a", sobriete60.RLE("aaabaa", 1));
+            assertEquals("1a1A1a", sobriete60.RLE("aAa", 1));
 
-//            assertEquals("111a111b111c", (efficacite04.RLE("abc", 2))); // FAILED BY : efficacite04;
-//            assertEquals("311a311b311c", (efficacite04.RLE("abc", 3))); // FAILED BY : efficacite04;
+            assertEquals("111a111b111c", (sobriete60.RLE("abc", 2)));
+            assertEquals("311a311b311c", (sobriete60.RLE("abc", 3)));
 
             String saeIte20="1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211S1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211A1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211E1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211_1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211A1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211l1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211g1113122113121113222123211211131211121311121321123113213221121113122123211211131221121311121312211213211321322112311311222113311213212322211211131221131211221321123113213221121113122113121113222112131112131221121321131211132221121321132132211331121321232221123113112221131112311322311211131122211213211331121321122112133221121113122113121113222123112221221321132132211231131122211331121321232221121113122113121113222123113221231231121113213221231221132221222112112322211o";
-//             assertEquals(saeIte20, efficacite04.RLE("SAE_Algo", 20)); // FAILED BY : efficacite04;
+             assertEquals(saeIte20, sobriete60.RLE("SAE_Algo", 20));
           }
           catch(Exception e){
              fail("Exception inatendue");
@@ -64,12 +69,12 @@ public class Efficacite04Test extends TestCase{
    @Test
    public void testUnRLE(){
       try{
-         assertEquals("", efficacite04.unRLE(""));
-         assertEquals("abc", efficacite04.unRLE("1a1b1c"));
-         assertEquals("abbccc", efficacite04.unRLE("1a2b3c"));
-         assertEquals("aaabaa", efficacite04.unRLE("3a1b2a"));
-         assertEquals("aAa", efficacite04.unRLE("1a1A1a"));
-         assertEquals("WWWWWWWWWWWWW", efficacite04.unRLE("9W4W"));
+         assertEquals("", sobriete60.unRLE(""));
+         assertEquals("abc", sobriete60.unRLE("1a1b1c"));
+         assertEquals("abbccc", sobriete60.unRLE("1a2b3c"));
+         assertEquals("aaabaa", sobriete60.unRLE("3a1b2a"));
+         assertEquals("aAa", sobriete60.unRLE("1a1A1a"));
+         assertEquals("WWWWWWWWWWWWW", sobriete60.unRLE("9W4W"));
       }
       catch(Exception e){
          fail("Exception inatendue");
@@ -79,28 +84,26 @@ public class Efficacite04Test extends TestCase{
    @Test
    public void testUnRLERecursif(){
       try{
-         assertEquals("", efficacite04.unRLE("", 1));
-         assertEquals("", efficacite04.unRLE("", 3));
+         assertEquals("", sobriete60.unRLE("", 1));
+         assertEquals("", sobriete60.unRLE("", 3));
          
-         assertEquals("abc", efficacite04.unRLE("1a1b1c", 1));
-         assertEquals("abbccc", efficacite04.unRLE("1a2b3c", 1));
-         assertEquals("aaabaa", efficacite04.unRLE("3a1b2a", 1));
-         assertEquals("aAa", efficacite04.unRLE("1a1A1a", 1));
+         assertEquals("abc", sobriete60.unRLE("1a1b1c", 1));
+         assertEquals("abbccc", sobriete60.unRLE("1a2b3c", 1));
+         assertEquals("aaabaa", sobriete60.unRLE("3a1b2a", 1));
+         assertEquals("aAa", sobriete60.unRLE("1a1A1a", 1));
 
-         assertEquals("abc", (efficacite04.unRLE("111a111b111c", 2))); // Exception raised : efficacite57;
-         assertEquals("abc", (efficacite04.unRLE("311a311b311c", 3))); // Exception raised : efficacite57;
+         assertEquals("abc", (sobriete60.unRLE("111a111b111c", 2)));
+         assertEquals("abc", (sobriete60.unRLE("311a311b311c", 3)));
       }
-      catch(AlgoException e){
+      catch(Exception e){
          fail("Exception inatendue");
       }
    }
-
 }
 
-/** This part will be for the number of fails/exceptions per class "efficacite" : 
- *  - efficacite04 : 3 fails             — respect des noms de fonctions
- *  - efficacite12 : 0                   — non respect des noms de fonctions (unRLE_Recursif, RLE_Recursif)
- *  - efficacite44 : 0                   — respect des noms de fonctions
- *  - efficacite46 : 0                   — respect des noms de fonctions
- *  - efficacite57 : 2 exceptions raised — respect des noms de fonctions
+/** This part will be for the number of fails/exceptions per class "sobriete" : 
+ *  - sobriete11 : 0 - non respect des noms de fonctions (contrainte de C donc normal)
+ *  - sobriete37 : 0 - non respect des noms de fonctions (contrainte de C donc normal)
+ *  - sobriete50 : 0 - respect des noms de fonctions
+ *  - sobriete60 : 0 - respect des noms de fonctions
  */
