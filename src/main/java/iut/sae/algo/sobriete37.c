@@ -163,3 +163,43 @@ char* unRLE_recursif(const char* s, int iterations) {
 
     return resMsgDecode;
 }
+
+// Les tests :
+
+
+void assertEqualStrings(const char *expected, const char *actual, const char *message) {
+    if (strcmp(expected, actual) == 0) {
+        printf("[PASS] %s\n", message);
+    } else {
+        printf("[FAIL] %s - Expected: \"%s\", Actual: \"%s\"\n", message, expected, actual);
+    }
+}
+
+int main() {
+    assertEqualStrings("", RLE(""), "RLE(\"\")=\"\"");
+    assertEqualStrings("1a1b1c", RLE("abc"), "RLE(\"abc\")=\"1a1b1c\"");
+    assertEqualStrings("1a2b3c", RLE("abbccc"), "RLE(\"abbccc\")=\"1a2b3c\"");
+    assertEqualStrings("3a1b2a", RLE("aaabaa"), "RLE(\"aaabaa\")=\"3a1b2a\"");
+    assertEqualStrings("1a1A1a", RLE("aAa"), "RLE(\"aAa\")=\"1a1A1a\"");
+    assertEqualStrings("9W4W", RLE("WWWWWWWWWWWWW"), "RLE(\"WWWWWWWWWWWWW\")=\"9W4W\"");
+
+    assertEqualStrings("", unRLE(""), "unRLE(\"\")=\"\"");
+    assertEqualStrings("abc", unRLE("1a1b1c"), "unRLE(\"1a1b1c\")=\"abc\"");
+    assertEqualStrings("abbccc", unRLE("1a2b3c"), "unRLE(\"1a2b3c\")=\"abbccc\"");
+    assertEqualStrings("aaabaa", unRLE("3a1b2a"), "unRLE(\"3a1b2a\")=\"aaabaa\"");
+    assertEqualStrings("aAa", unRLE("1a1A1a"), "unRLE(\"1a1A1a\")=\"aAa\"");
+    assertEqualStrings("WWWWWWWWWWWWW", unRLE("9W4W"), "unRLE(\"9W4W\")=\"WWWWWWWWWWWWW\"");
+
+    char input[] = "abc";
+    assertEqualStrings("1a1b1c", RLE_recursif(input, 1), "RLE_recursif(\"abc\", 1)=\"1a1b1c\"");
+    assertEqualStrings("111a111b111c", RLE_recursif(input, 2), "RLE_recursif(\"abc\", 2)=\"111a111b111c\"");
+    assertEqualStrings("311a311b311c", RLE_recursif(input, 3), "RLE_recursif(\"abc\", 3)=\"311a311b311c\"");
+
+    assertEqualStrings("abc", unRLE_recursif("1a1b1c", 1), "unRLE_recursif(\"1a1b1c\", 1)=\"abc\"");
+    assertEqualStrings("abc", unRLE_recursif("111a111b111c", 2), "unRLE_recursif(\"111a111b111c\", 2)=\"abc\"");
+    assertEqualStrings("abc", unRLE_recursif("311a311b311c", 3), "unRLE_recursif(\"311a311b311c\", 3)=\"abc\"");
+
+    return 0;
+}
+
+// tous les tests sont passées avec succès
